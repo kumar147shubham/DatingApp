@@ -1,0 +1,17 @@
+<h1>Internal Server Error - refreshing the page will make the error disappear!</h1>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.error}}</h5>
+    <p class="font-weight-bold">Note: if you are seen this then angular is probably not to blaim</p>
+    <p> what to do next?</p>
+    <ol>
+        <li>Open the chrome dev tools</li>
+        <li>Inspect the network tab</li>
+        <li>Check the failing request</li>
+        <li>Examine the request URL - make sure is it correct</li>
+        <li>Reproduce the error in the Postman - if we see the same response then issue is not with Angular</li>
+
+    </ol>
+
+    <p>Follwing is the stack trace - this is where you investigation should start !</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+</ng-container>
